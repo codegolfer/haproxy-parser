@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './InputBlock.css'
 
 class InputBlock extends Component {
 
@@ -24,17 +25,18 @@ class InputBlock extends Component {
 
     render() {
         return (
-            <div>
+            <div className="InputBlock">
                 <input
                     type="text"
                     value={this.state.inputValue}
                     onChange={this.handleChange}
                     onSubmit={this.handleSubmit}
+                    className="InputBlock-input"
                 ></input>
                 <button
                     onClick={this.handleSubmit}
-                >Help me </button>
-
+                    className="InputBlock-button"
+                >Parse</button>
             </div>
         );
     }
